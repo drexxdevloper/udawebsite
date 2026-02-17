@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RED DISTRICT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop id="bgVideo">
+    <source src="bg.mp4" type="video/mp4">
+</video>
+
+<!-- LOADING SCREEN -->
+<div id="loading">
+    <h1>CGB</h1>
+
+    <div class="bar">
+        <div class="fill"></div>
+    </div>
+
+    <p id="percentText">0%</p>
+    <p id="enterText">KLIK DIMANA SAJA UNTUK MASUK</p>
+</div>
+
+<!-- MAIN -->
+<div id="main" class="hidden">
+
+    <!-- MENU -->
+    <div id="menuToggle">☰</div>
+
+    <div id="dropdownMenu">
+        <p onclick="showSection('member')">🔥 Member</p>
+        <p onclick="showSection('admin')">👑 Admin</p>
+        <p onclick="showSection('galeri')">🖼️ Galeri</p>
+        <p onclick="showSection('war')">⚔️ War</p>
+    </div>
+
+    <!-- LANDING -->
+    <div id="landing">
+        <img src="logo.png">
+        <p>Klik di bawah ini untuk mendaftar CGB</p>
+
+        <button id="daftarBtn"
+        onclick="window.location.href='https://wa.me/+6282254458826'">
+        DAFTAR SEKARANG
+        </button>
+    </div>
+
+    <!-- MUSIC -->
+    <div id="musicBox">⏸ MUSIC</div>
+
+    <!-- CONTENT -->
+    <div id="content">
+
+        <div id="admin" class="section">
+            <h2>ADMIN LIST</h2>
+            <ul>
+                <li>ARES</li>
+                <li>REYY</li>
+            </ul>
+        </div>
+
+<div id="member" class="section">
+    <h2>MEMBER LIST</h2>
+    <ul>
+        <li>FADIL</li>
+        <li>XEAN</li>
+        <li>ADIT</li>
+        <li>DZAKY</li>
+        <li>DANIS</li>
+        <li>HANZ</li>
+        <li>IKI</li>
+        <li>JEHAN</li>
+        <li>ZIDAN</li>
+        <li>LIO</li>
+        <li>PIDOH</li>
+        <li>REHAN</li>
+        <li>REN</li>
+        <li>ROJAK</li>
+        <li>YOGA</li>
+        <li>FATIR</li>
+        <li>DANIEL</li>
+    </ul>
+</div>
+
+
+        <div id="galeri" class="section">
+            <h2>GALERI</h2>
+            <div class="gallery">
+                <img src="foto1.jpg">
+                <img src="foto2.jpg">
+                <img src="foto3.jpg">
+            </div>
+        </div>
+
+        <div id="war" class="section">
+            <h2>WAR INFO</h2>
+            <ul>
+                <li>UDA VS CGB || 1-5</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
