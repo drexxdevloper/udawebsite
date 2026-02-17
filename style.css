@@ -1,0 +1,171 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+
+/* VIDEO */
+#bgVideo{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+object-fit:cover;
+z-index:-3;
+}
+
+/* OVERLAY */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:linear-gradient(rgba(0,0,0,.75), rgba(20,0,0,.9));
+z-index:-2;
+}
+
+body{
+color:white;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+/* LOADING */
+#loading{
+position:fixed;
+inset:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:black;
+z-index:10;
+}
+
+#loading h1{
+font-size:60px;
+color:#ff1a1a;
+margin-bottom:25px;
+letter-spacing:6px;
+}
+
+.bar{
+width:260px;
+height:6px;
+background:#222;
+border:1px solid red;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+width:0%;
+background:#ff1a1a;
+}
+
+#enterText{
+margin-top:20px;
+color:#ff1a1a;
+display:none;
+cursor:pointer;
+}
+
+/* MAIN */
+#main{
+opacity:0;
+transform:translateY(25px);
+transition:.8s ease;
+}
+
+#main.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.hidden{display:none}
+
+/* LANDING */
+#landing{
+margin-top:120px;
+text-align:center;
+padding:20px;
+}
+
+#landing img{
+width:140px;
+margin-bottom:20px;
+}
+
+#daftarBtn{
+padding:10px 25px;
+background:#111;
+border:1px solid red;
+color:#ff1a1a;
+cursor:pointer;
+transition:.3s;
+}
+
+#daftarBtn:hover{
+background:#ff1a1a;
+color:black;
+}
+
+/* MENU */
+#menuToggle{
+position:fixed;
+top:20px;
+right:20px;
+font-size:28px;
+cursor:pointer;
+background:#111;
+padding:8px 14px;
+border:1px solid red;
+z-index:20;
+}
+
+#dropdownMenu{
+position:fixed;
+top:65px;
+right:20px;
+width:180px;
+background:#0b0b0b;
+border:1px solid red;
+display:none;
+flex-direction:column;
+z-index:20;
+}
+
+#dropdownMenu p{
+padding:14px;
+cursor:pointer;
+border-bottom:1px solid #1a1a1a;
+}
+
+/* MUSIC */
+#musicBox{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#111;
+border:1px solid red;
+padding:10px 15px;
+cursor:pointer;
+z-index:20;
+}
+
+/* CONTENT */
+#content{
+margin-top:40px;
+padding:20px;
+padding-bottom:100px;
+}
+
+.section{display:none}
+.section.show{display:block}
+
+/* GALERI */
+.gallery{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+max-width:320px;
+border:2px solid red;
+}
